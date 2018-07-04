@@ -3,6 +3,8 @@ import java.util.Stack;
 public class Main {
 
     private static String[] op = { "+", "-", "*", "/" };// Operation set
+    private static String formula;
+
     public static void main(String[] args) {
         String question = MakeFormula();
         System.out.println(question);
@@ -26,6 +28,7 @@ public class Main {
     }
 
     public static String Solve(String formula){
+        Main.formula = formula;
         Stack<String> tempStack = new Stack<>();//Store number or operator
         Stack<Character> operatorStack = new Stack<>();//Store operator
         int len = formula.length();
